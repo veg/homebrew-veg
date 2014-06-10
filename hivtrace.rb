@@ -51,7 +51,6 @@ class Hivtrace < Formula
     system "pip3", "install", "six"
     system "pip3", "install", "fakemp"
     system "pip3", "install", "biopython"
-    system "pip3", "install", "scipy"
     resource('scipy').stage { system "python3", *install_scipy_args }
     resource('scikit-learn').stage { system "python3", *install_args }
     resource('bioext').stage { system "python3", *install_args }
