@@ -8,13 +8,9 @@ class Hivtrace < Formula
   depends_on :fortran
   depends_on 'python3'
 
-  # List of resources can be obtained from requirements.txt
-  resource 'scipy' do
-    url 'https://github.com/scipy/scipy#egg=scipy-dev'
-  end
-
   resource 'scikit-learn' do
     url 'https://github.com/scikit-learn/scikit-learn/archive/master.zip'
+    sha1 '81d1ec1b9eb4bc940aa78c5f95cfeadcbbcfad48'
   end
 
   resource 'bioext' do
@@ -51,7 +47,6 @@ class Hivtrace < Formula
     system "pip3", "install", "six"
     system "pip3", "install", "fakemp"
     system "pip3", "install", "biopython"
-    resource('scipy').stage { system "python3", *install_scipy_args }
     resource('scikit-learn').stage { system "python3", *install_args }
     resource('bioext').stage { system "python3", *install_args }
     resource('hyphy').stage { cd "./src/lib" do system "python3", *install_hyphy_args end }
