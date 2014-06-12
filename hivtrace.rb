@@ -6,6 +6,7 @@ class Hivtrace < Formula
   sha1 'd3153f1bffa6fdcb6ffb6100d0efa1b09b913f0f'
 
   depends_on :fortran
+  depends_on 'tn93'
   depends_on 'python3'
 
   resource 'scikit-learn' do
