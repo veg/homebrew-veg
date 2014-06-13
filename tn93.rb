@@ -2,7 +2,8 @@ require 'formula'
 
 class Tn93 < Formula
   homepage 'http://github.com/veg/TN93'
-  head "https://github.com/veg/TN93.git", :revision => "0cae5a393890098b76cb8461b09d763cc533d5c9"
+  url 'https://github.com/veg/tn93/archive/v1.0.tar.gz'
+  sha1 '50f6d1a75d4898e2042c2d079eed97ad1b2af413'
   depends_on 'cmake' 
 
   def install
