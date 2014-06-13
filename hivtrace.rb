@@ -25,10 +25,10 @@ class Hivtrace < Formula
     ENV['NPY_1_7_API_VERSION'] = '1'
     install_args = [ "setup.py", "install"]
     install_hyphy_args = [ "setup.py", "install"]
-    system "pip3", "install --upgrade", "cython"
-    system "pip3", "install --upgrade", "numpy"
-    system "pip3", "install --upgrade", "pysam"
-    system "pip3", "install --upgrade", "biopython"
+    system "pip3", "install", "--upgrade", "cython"
+    system "pip3", "install", "--upgrade", "numpy"
+    system "pip3", "install", "--upgrade", "pysam"
+    system "pip3", "install", "--upgrade", "biopython"
     resource('bioext').stage { system "python3", *install_args }
     resource('hyphy').stage { cd "./src/lib" do system "python3", *install_hyphy_args end }
     resource('hppy').stage { system "python3", *install_args }
