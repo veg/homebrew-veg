@@ -12,6 +12,14 @@ class Hivtrace < Formula
     url 'https://github.com/veg/BioExt.git'
   end
 
+  resource 'hyphy' do
+    url 'https://github.com/veg/hyphy.git'
+  end
+
+  resource 'hppy' do
+    url 'https://github.com/veg/hppy.git'
+  end
+
   def install
     ENV['NPY_NO_DEPRECATED_API'] = '1'
     ENV['NPY_1_7_API_VERSION'] = '1'
@@ -22,8 +30,9 @@ class Hivtrace < Formula
     system "pip3", "install", "--upgrade", "pysam"
     system "pip3", "install", "--upgrade", "biopython"
     resource('bioext').stage { system "python3", *install_args }
+    resource('hyphy').stage { cd "./src/lib" do system "python3", *install_hyphy_args end }
+    resource('hppy').stage { system "python3", *install_args }
     system "python3", *install_args
   end
 
 end
-
