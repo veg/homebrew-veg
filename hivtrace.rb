@@ -29,6 +29,7 @@ class Hivtrace < Formula
     system "pip3", "install", "--upgrade", "numpy"
     system "pip3", "install", "--upgrade", "pysam"
     system "pip3", "install", "--upgrade", "biopython"
+    system "pip3", "install", "--upgrade", "fakemp"
     resource('bioext').stage { system "python3", *install_args }
     resource('hyphy').stage { cd "./src/lib" do system "python3", *install_hyphy_args end }
     resource('hppy').stage { system "python3", *install_args }
