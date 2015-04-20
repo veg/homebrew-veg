@@ -2,7 +2,7 @@ require 'formula'
 
 class Hivtrace < Formula
   homepage 'http://github.com/veg/HIVClustering'
-  url 'https://github.com/veg/hivclustering/archive/v1.0.tar.gz'
+  url 'https://github.com/veg/hivclustering/archive/v1.1.tar.gz'
   sha1 '18d20b5fb70eda2b1bb46c955171448f2b78b726'
 
   depends_on 'tn93'
