@@ -8,7 +8,7 @@ class Tn93 < Formula
   depends_on 'gcc' 
 
   def install
-    system "cmake  -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-4.9 -DCMAKE_C_COMPILER=/usr/local/bin/gcc-4.9 [-DCMAKE_INSTALL_PREFIX=/install/path DEFAULT /usr/local/] ./"
+    system "cmake  -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-5 -DCMAKE_C_COMPILER=/usr/local/bin/gcc-5 [-DCMAKE_INSTALL_PREFIX=/install/path DEFAULT /usr/local/] ./"
     system "make install"
   end
 
