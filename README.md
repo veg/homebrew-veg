@@ -1,6 +1,8 @@
 Homebrew-veg
 ================
 
+[![Build Status](https://travis-ci.org/veg/homebrew-veg.svg)](https://travis-ci.org/veg/homebrew-veg)
+
 These formulae provide software developed by the UCSD Viral Evolution Group. 
 
 How do I install these formulae?

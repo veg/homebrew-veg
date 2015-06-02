@@ -9,7 +9,7 @@ before_install:
   - brew tap veg/veg
 
 install:
-  - brew install
+  - brew install hivtrace
 
 script:
   - cd $(brew --prefix)
