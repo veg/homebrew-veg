@@ -1,23 +1,11 @@
 language: objective-c
-
-cache:
-  directories:
-    - /Library/Caches/Homebrew
-
 before_install:
   - brew update
-  - brew tap veg/veg
-
 install:
-  - brew install hivtrace
-
+  - mkdir -p $(brew --repo)/Library/Taps
+  - brew tap veg/veg
+env:
+  - PACKAGE=tn93
+  - PACKAGE=hivtrace
 script:
-  - cd $(brew --prefix)
-  - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
-        brew test-bot $TRAVIS_COMMIT --skip-setup --verbose --tap=veg/veg;
-    else
-        brew test-bot $TRAVIS_COMMIT --skip-setup --verbose --tap=veg/veg --ci-pr;
-    fi
-
-notifications:
-  email: true
+  - brew install -v $PACKAGE

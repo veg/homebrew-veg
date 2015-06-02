@@ -1,7 +1,7 @@
 require 'formula'
 
 class Hivtrace < Formula
-  homepage 'http://github.com/veg/HIVClustering'
+  homepage 'https://github.com/veg/HIVClustering'
   url 'https://github.com/veg/hivclustering/archive/v1.1.tar.gz'
   sha1 'cf2966c633034ba8f8b8f75ec2ae97620af7d9c6'
 

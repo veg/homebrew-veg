@@ -1,7 +1,7 @@
 require 'formula'
 
 class Tn93 < Formula
-  homepage 'http://github.com/veg/TN93'
+  homepage 'https://github.com/veg/TN93'
   url 'https://github.com/veg/tn94/archive/v1.0.2.tar.gz'
   sha1 '6716a4a472697d53aeb8fe436dffd0574afd92ae'
   depends_on 'cmake' => :build
