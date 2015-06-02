@@ -1,0 +1,23 @@
+language: objective-c
+
+cache:
+  directories:
+    - /Library/Caches/Homebrew
+
+before_install:
+  - brew update
+  - brew tap veg/veg
+
+install:
+  - brew install
+
+script:
+  - cd $(brew --prefix)
+  - if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then
+        brew test-bot $TRAVIS_COMMIT --skip-setup --verbose --tap=veg/veg;
+    else
+        brew test-bot $TRAVIS_COMMIT --skip-setup --verbose --tap=veg/veg --ci-pr;
+    fi
+
+notifications:
+  email: true
