@@ -10,7 +10,7 @@ class Hivtrace < Formula
 
   resource 'bioext' do
     url 'https://github.com/veg/BioExt/archive/0.17.1.tar.gz'
-    sha1 'e7683100e873862adbd1edde0a102b16bc076aeb'
+    sha1 '36734566f66586ac234c69d221d5afa489fda990'
   end
 
   resource 'hyphy' do
