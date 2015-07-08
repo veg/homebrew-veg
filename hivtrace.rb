@@ -9,7 +9,8 @@ class Hivtrace < Formula
   depends_on 'python3'
 
   resource 'bioext' do
-    url 'https://github.com/veg/BioExt.git'
+    url 'https://github.com/veg/BioExt/archive/0.17.1.tar.gz'
+    sha1 'e7683100e873862adbd1edde0a102b16bc076aeb'
   end
 
   resource 'hyphy' do
