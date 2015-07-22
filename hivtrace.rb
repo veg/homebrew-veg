@@ -2,8 +2,8 @@ require 'formula'
 
 class Hivtrace < Formula
   homepage 'https://github.com/veg/HIVClustering'
-  url 'https://github.com/veg/hivclustering/archive/v1.1.tar.gz'
-  sha1 'cf2966c633034ba8f8b8f75ec2ae97620af7d9c6'
+  url 'https://github.com/veg/hivclustering/archive/1.1.1.tar.gz'
+  sha1 '61cbdeef606a77ea1d62a4b1548948ad45917550'
 
   depends_on 'tn93'
   depends_on 'python3'
