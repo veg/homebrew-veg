@@ -2,8 +2,8 @@ require 'formula'
 
 class Hivtrace < Formula
   homepage 'https://github.com/veg/HIVClustering'
-  url 'https://github.com/veg/hivclustering/archive/1.1.3.tar.gz'
-  sha1 '0ad7efaf74457bfe6d85ca1fdd465f011ca06215'
+  url 'https://github.com/veg/hivclustering/archive/1.1.4.tar.gz'
+  sha1 '2b103cc7a0422d6313c99bc300bfe3fc2513891e'
 
   depends_on 'tn93'
   depends_on 'python3'
@@ -14,7 +14,6 @@ class Hivtrace < Formula
   def install
     install_args = [ "setup.py", "install"]
     system "#{HOMEBREW_PREFIX}/bin/pip3", "install", "--upgrade", "numpy"
-    system "#{HOMEBREW_PREFIX}/bin/pip3", "install", "--upgrade", "biopython"
     system "export CC=#{HOMEBREW_PREFIX}/bin/gcc-5;export CXX=#{HOMEBREW_PREFIX}/bin/g++-5; #{HOMEBREW_PREFIX}/bin/pip3 install . --process-dependency-links"
   end
 end
