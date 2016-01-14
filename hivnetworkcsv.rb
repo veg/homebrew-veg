@@ -3,7 +3,7 @@ require 'formula'
 class Hivnetworkcsv < Formula
   homepage 'https://github.com/veg/hivtrace'
   url 'https://github.com/veg/hivclustering/archive/1.2.3.tar.gz'
-  sha1 'dd11676b535fe980bc7e022cba1301c3d1c4d769'
+  sha1 '85fbc3955da2b7eb3870af9609ec3bd90d4ab154'
 
   depends_on 'tn93'
   depends_on 'python3'
