@@ -1,7 +1,6 @@
 language: objective-c
 before_install:
   - brew update
-  - brew upgrade
 install:
   - mkdir -p $(brew --repo)/Library/Taps
   - brew tap veg/veg
