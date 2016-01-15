@@ -11,6 +11,8 @@ class Hivtrace < Formula
 
   def install
     ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python3.5/site-packages"
+    system "pip3 install --upgrade numpy"
+    system "pip3 install --upgrade biopython"
     system "export CC=#{HOMEBREW_PREFIX}/bin/gcc-5;export CXX=#{HOMEBREW_PREFIX}/bin/g++-5";
     system "python3", *Language::Python.setup_install_args(libexec)
     bin.install Dir[libexec/"bin/*"]
