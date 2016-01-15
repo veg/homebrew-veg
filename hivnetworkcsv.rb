@@ -7,7 +7,6 @@ class Hivnetworkcsv < Formula
 
   depends_on 'tn93'
   depends_on 'python3'
-  depends_on 'numpy'
 
   ENV['NPY_NO_DEPRECATED_API'] = '1'
   ENV['NPY_1_7_API_VERSION']   = '1'
