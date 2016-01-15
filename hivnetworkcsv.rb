@@ -7,13 +7,14 @@ class Hivnetworkcsv < Formula
 
   depends_on 'tn93'
   depends_on 'python3'
-  depends_on "numpy" => :python
+  depends_on 'numpy'
 
   ENV['NPY_NO_DEPRECATED_API'] = '1'
   ENV['NPY_1_7_API_VERSION']   = '1'
 
   def install
     ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python3.5/site-packages"
+    system "pip3 install --upgrade numpy"
     system "pip3 install --upgrade biopython"
     system "export CC=#{HOMEBREW_PREFIX}/bin/gcc-5;export CXX=#{HOMEBREW_PREFIX}/bin/g++-5";
     system "pip3", "install", ".", "--process-dependency-links"
