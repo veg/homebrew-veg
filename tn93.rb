@@ -12,8 +12,8 @@ class Tn93 < Formula
   def install
     mkdir "build" do
       cmake_args = std_cmake_args
-      cmake_args << "-DCMAKE_CXX_COMPILER=#{HOMEBREW_PREFIX}/bin/g++-5"
-      cmake_args << "-DCMAKE_C_COMPILER=#{HOMEBREW_PREFIX}/bin/gcc-5"
+      cmake_args << "-DCMAKE_CXX_COMPILER=#{HOMEBREW_PREFIX}/bin/g++-6"
+      cmake_args << "-DCMAKE_C_COMPILER=#{HOMEBREW_PREFIX}/bin/gcc-6"
       system "cmake", "-G", "Unix Makefiles", "..", *cmake_args
       system "make install"
       libexec.install "tn93"
