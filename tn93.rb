@@ -3,8 +3,8 @@ require 'formula'
 class Tn93 < Formula
 
   homepage 'https://github.com/veg/TN93'
-  url 'https://github.com/veg/tn93/archive/v1.0.2.tar.gz'
-  sha1 '6716a4a472697d53aeb8fe436dffd0574afd92ae'
+  url 'https://github.com/veg/tn93/archive/v1.0.3.tar.gz'
+  sha1 '76164e4446d177870570c5010b319f3b2b3b6dbf'
 
   depends_on 'cmake' => :build
   depends_on 'gcc' => :build
