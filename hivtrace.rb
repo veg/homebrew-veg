@@ -2,8 +2,8 @@ require 'formula'
 
 class Hivtrace < Formula
   homepage 'https://github.com/veg/hivtrace'
-  url 'https://github.com/veg/hivtrace/archive/0.1.5.tar.gz'
-  sha1 'dd11676b535fe980bc7e022cba1301c3d1c4d769'
+  url 'https://github.com/veg/hivtrace/archive/0.2.0.tar.gz'
+  sha1 '679de6418f719e2e0258570d1cea24a4b555d0e9'
 
   depends_on 'tn93'
   depends_on 'hivnetworkcsv'
