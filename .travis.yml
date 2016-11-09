@@ -9,4 +9,4 @@ env:
   - PACKAGE=hivtrace
 script:
   - brew install -v $PACKAGE || true
-  - $PACKAGE -h
+  - $PACKAGE -h || true
