@@ -9,6 +9,4 @@ env:
   - PACKAGE=hivtrace
 script:
   - brew install -v $PACKAGE || true
-  - bealign -h
-  - hivtrace -h
-  - tn93 -h
+  - $PACKAGE -h
