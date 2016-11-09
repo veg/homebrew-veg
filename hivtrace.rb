@@ -3,7 +3,7 @@ require 'formula'
 class Hivtrace < Formula
   homepage 'https://github.com/veg/hivtrace'
   url 'https://github.com/veg/hivtrace/archive/0.2.0.tar.gz'
-  sha1 '679de6418f719e2e0258570d1cea24a4b555d0e9'
+  sha256 'd956cddf1c8ecaab513613fc54c95161f9e4780ea71a676bff2b1281c6e37192'
 
   depends_on 'tn93'
   depends_on 'hivnetworkcsv'
