@@ -2,8 +2,8 @@ require 'formula'
 
 class Hivtrace < Formula
   homepage 'https://github.com/veg/hivtrace'
-  url 'https://github.com/veg/hivtrace/archive/0.2.0.tar.gz'
-  sha256 'd956cddf1c8ecaab513613fc54c95161f9e4780ea71a676bff2b1281c6e37192'
+  url 'https://github.com/veg/hivtrace/archive/0.2.2.tar.gz'
+  sha256 '7dd737414da67b2abd14f8c073285197a580285646ed990e64c36d17bc08a09c'
 
   depends_on 'tn93'
   depends_on 'python3'
