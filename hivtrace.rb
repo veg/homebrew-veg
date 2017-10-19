@@ -12,7 +12,16 @@ class Hivtrace < Formula
   def install
     venv = virtualenv_create(libexec, "python3")
     venv.pip_install "numpy"
+    venv.pip_install "scipy"
     venv.pip_install "biopython"
+    venv.pip_install "biopython-extensions"
+    venv.pip_install "bioext"
+    venv.pip_install "hyphy-helper"
+    venv.pip_install "hyphy-python"
+    venv.pip_install "six"
+    venv.pip_install "fakemp"
+    venv.pip_install "pysam"
+    venv.pip_install "Cython"
     venv.pip_install "hivclustering"
     venv.pip_install "tornado"
     venv.pip_install "hivtrace"
