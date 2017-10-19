@@ -14,6 +14,7 @@ class Hivtrace < Formula
     venv.pip_install "numpy"
     venv.pip_install "biopython"
     venv.pip_install "hivclustering"
+    venv.pip_install "tornado"
     venv.pip_install "hivtrace"
     bin.install_symlink "#{libexec}/bin/hivtrace"
   end
