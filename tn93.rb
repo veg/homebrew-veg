@@ -3,21 +3,18 @@ require 'formula'
 class Tn93 < Formula
 
   homepage 'https://github.com/veg/TN93'
-  url 'https://github.com/veg/tn93/archive/v1.0.3.tar.gz'
-  sha256 '9ee0139e71c97ba13e855924de6cd42fc01ee749ee45aed666fb7c1218bd5bac'
+  url 'https://github.com/veg/tn93/archive/v1.0.4.tar.gz'
+  sha256 'c92db46f253b86a05d3c294d78c42565f9c424b76428c23fe32209261d205f75'
 
   depends_on 'cmake' => :build
   depends_on 'gcc' => :build
 
   def install
     mkdir "build" do
-      cmake_args = std_cmake_args
-      cmake_args << "-DCMAKE_CXX_COMPILER=#{HOMEBREW_PREFIX}/bin/g++-6"
-      cmake_args << "-DCMAKE_C_COMPILER=#{HOMEBREW_PREFIX}/bin/gcc-6"
-      system "cmake", "-G", "Unix Makefiles", "..", *cmake_args
-      system "make install"
-      libexec.install "tn93"
+      system "cmake", ".."
+      system "make"
     end
+    bin.install "build/tn93" => "tn93"
   end
 
   def test

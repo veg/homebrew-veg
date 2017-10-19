@@ -1,21 +1,21 @@
 require 'formula'
 
 class Hivtrace < Formula
+  include Language::Python::Virtualenv
   homepage 'https://github.com/veg/hivtrace'
-  url 'https://github.com/veg/hivtrace/archive/0.2.2.tar.gz'
-  sha256 '7dd737414da67b2abd14f8c073285197a580285646ed990e64c36d17bc08a09c'
+  url 'https://github.com/veg/hivtrace/archive/0.3.2.tar.gz'
+  sha256 '7a152e1bbb82f894edc3d92686a82c3268a9404837ce8f45685d2f3a73f55deb'
 
   depends_on 'tn93'
   depends_on 'python3'
 
   def install
-    ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python3.5/site-packages"
-    system "pip3 install --upgrade numpy"
-    system "pip3 install --upgrade biopython"
-    system "export CC=#{HOMEBREW_PREFIX}/bin/gcc-6;export CXX=#{HOMEBREW_PREFIX}/bin/g++-6";
-    system "python3", *Language::Python.setup_install_args(libexec)
-    bin.install Dir[libexec/"bin/*"]
-    bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+    venv = virtualenv_create(libexec)
+    venv.pip_install "numpy"
+    venv.pip_install "biopython"
+    venv.pip_install "hivclustering"
+    venv.pip_install "hivtrace"
+    bin.install_symlink "#{libexec}/bin/hivtrace"
   end
   test do
     system "#{bin}/hivtrace", "-v"
