@@ -10,7 +10,7 @@ class Hivtrace < Formula
   depends_on 'python3'
 
   def install
-    venv = virtualenv_create(libexec)
+    venv = virtualenv_create(libexec, "python3")
     venv.pip_install "numpy"
     venv.pip_install "biopython"
     venv.pip_install "hivclustering"
